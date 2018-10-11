@@ -1,0 +1,47 @@
+#pen{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background: url('../img/pencilNegro.png') no-repeat;
+  padding-right: 7%;
+}
+#penRed{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background: url('../img/pencilRojo.png') no-repeat;
+  padding-right: 7%;
+}
+#penBlue{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background: url('../img/pencilAzul.png') no-repeat;
+  padding-right: 7%;
+}
+#penGreen{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background: url('../img/pencilVerde.png') no-repeat;
+  padding-right: 7%;
+}
+#eraser{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background: url('../img/eraser.png') no-repeat;
+  padding-right: 7%;
+}
+#save{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background: url('../img/save.png') no-repeat;
+}
+#buttonCalculate{
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  background: url('../img/calculator.png') no-repeat;
+}
