@@ -41,7 +41,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="img/hospital.png" width="30" height="30">
+                    <img src="img/hospital.png" width="150" height="30">
                 </a>
             </div>
 
@@ -80,7 +80,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Registro de Pacientes</div>
+                    <div class="panel-heading">Registro de Usuarios</div>
                     <div class="panel-body">
                       <?php foreach ($usuarios as $user) { ?>
                         <form class="form-horizontal" role="form" method="POST" action="modificarUsuario">

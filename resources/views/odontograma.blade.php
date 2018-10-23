@@ -45,7 +45,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="img/hospital.png" width="30" height="30">
+                    <img src="img/hospital.png" width="150" height="30">
                 </a>
             </div>
 
@@ -61,27 +61,27 @@
                 </ul>
                 </ul>
 
-              
+
             </div>
         </div>
     </nav>
-    
+
     <div class="panel-heading" align="right" id="headpnl">
        <form class="navbar-form">
 
          <div class="input-group">
-           
+
            <span class="input-group-addon" style="background-color:#5bc0de;color:#fff"><i class="glyphicon glyphicon-search"></i></span>
            <input type="text" class="form-control" placeholder="Buscar por dni" id="searchDNI" name="searchDNI">
 
             <span class="input-group-addon" style="background-color:#5bc0de;color:#fff"><i class="glyphicon glyphicon-search"></i></span>
             <input type="text" class="form-control" placeholder="Buscar por apellido paterno" id="search" name="search">
           </div>
-       
+
        </form>
 
      </div>
-    
+
     <div class="panel-body">
       <div class="table-responsive">
         <div class="paciente">

@@ -41,7 +41,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="img/hospital.png" width="30" height="30">
+                    <img src="img/hospital.png" width="150" height="30">
                 </a>
             </div>
 
@@ -81,7 +81,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Registro de Historial Médico</div>
+                    <div class="panel-heading">Registro de Historial Odontol&oacute;gico</div>
                     <div class="panel-body">
 
                         <form class="form-horizontal" method="POST" action="modificarHistorialForm" id="form2" enctype="multipart/form-data">
@@ -129,7 +129,7 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('tiempoEnfermedad') ? ' has-error' : '' }}">
-                                  <label for="tiempoEnfermedad" class="col-md-4 control-label">Tiempo de Enfermedad: </label>
+                                  <label for="tiempoEnfermedad" class="col-md-4 control-label">Tiene alguna enfermedad?: </label>
 
                                   <div class="col-md-8">
                                       <input id="tiempoEnfermedad" type="text" class="form-control" name="tiempoEnfermedad" value="{{$paciente->tiempoEnfermedad}}">
@@ -141,10 +141,10 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('formaInicio') ? ' has-error' : '' }}">
-                                  <label for="formaInicio" class="col-md-4 control-label">Forma de inicio: </label>
+                                  <!--<label for="formaInicio" class="col-md-4 control-label">Forma de inicio: </label>-->
 
                                   <div class="col-md-8">
-                                      <textarea class="form-control" rows="5" id="formaInicio" name="formaInicio">{{$paciente->formaInicio}}</textarea>
+                                      <input class="form-control" rows="5" type="hidden" id="formaInicio" name="formaInicio" value="--">{{$paciente->formaInicio}}
 
                                       @if ($errors->has('formaInicio'))
                                           <span class="help-block">
@@ -154,7 +154,7 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('curso') ? ' has-error' : '' }}">
-                                  <label for="curso" class="col-md-4 control-label">Curso: </label>
+                                  <label for="curso" class="col-md-4 control-label">Se encuentra medicado?: </label>
 
                                   <div class="col-md-8">
                                       <input id="curso" type="text" class="form-control" name="curso" value="{{$paciente->curso}}">
@@ -167,10 +167,10 @@
                               </div>
                               <input id="status" type="hidden" class="form-control" name="status" value="">
                               <div class="form-group{{ $errors->has('signos') ? ' has-error' : '' }}">
-                                  <label for="signos" class="col-md-4 control-label">Signos y principales signos: </label>
+                                  <!--<label for="signos" class="col-md-4 control-label">Signos y principales signos: </label>-->
 
                                   <div class="col-md-8">
-                                      <textarea class="form-control" rows="6" id="signos" name="signos">{{$paciente->signos}}</textarea>
+                                      <input class="form-control" rows="6" type="hidden" id="signos" name="signos">{{$paciente->signos}}
 
                                       @if ($errors->has('signos'))
                                           <span class="help-block">
@@ -182,10 +182,10 @@
                             </div>
                             <div class="col-sm-6">
                               <div class="form-group{{ $errors->has('relato') ? ' has-error' : '' }}">
-                                  <label for="relato" class="col-md-2 control-label">Relato: </label>
+                                  <!--<label for="relato" class="col-md-2 control-label">Relato: </label>-->
 
                                   <div class="col-md-10">
-                                      <textarea class="form-control" rows="4" id="relato" name="relato">{{$paciente->relato}}</textarea>
+                                      <input class="form-control" type="hidden" rows="4" id="relato" name="relato">{{$paciente->relato}}
 
                                       @if ($errors->has('relato'))
                                           <span class="help-block">
@@ -195,10 +195,10 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('examenfisico') ? ' has-error' : '' }}">
-                                  <label for="examenfisico" class="col-md-2 control-label">Examen Físico: </label>
+                                  <!--<label for="examenfisico" class="col-md-2 control-label">Examen Físico: </label>-->
 
                                   <div class="col-md-10">
-                                      <textarea class="form-control" rows="4" id="examenfisico" name="examenfisico">{{$paciente->examenFisico}}</textarea>
+                                      <input class="form-control" type="hidden" rows="4" id="examenfisico" name="examenfisico">{{$paciente->examenFisico}}
 
                                       @if ($errors->has('examenfisico'))
                                           <span class="help-block">
@@ -270,10 +270,10 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('tratamiento') ? ' has-error' : '' }}">
-                                  <label for="tratamiento" class="col-md-2 control-label">Tratamiento: </label>
+                                  <!--<label for="tratamiento" class="col-md-2 control-label">Tratamiento: </label>-->
 
                                   <div class="col-md-10">
-                                      <textarea class="form-control" rows="4" id="tratamiento" name="tratamiento">{{$paciente->tratamiento}}</textarea>
+                                      <input class="form-control" type="hidden" rows="4" id="tratamiento" name="tratamiento">{{$paciente->tratamiento}}
 
                                       @if ($errors->has('tratamiento'))
                                           <span class="help-block">

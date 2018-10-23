@@ -41,7 +41,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('secretario') }}">
-                    <img src="img/hospital.png" width="30" height="30">
+                    <img src="img/hospital.png" width="150" height="30">
                 </a>
             </div>
 
@@ -157,7 +157,7 @@
                   <td>{{ $cita->fechaCita }}</td>
                   <?php if( $cita->estado == "Atendido") {?>
                   <td>
-                    
+
                       <button type="submit" class="btn btn-info" onclick="alert('Esta cita ya no puede ser editada')"><i class="glyphicon glyphicon-pencil" align="right"></i></button>
                   </td>
                   <?php } else{?>

@@ -41,7 +41,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="img/hospital.png" width="30" height="30">
+                    <img src="img/hospital.png" width="150" height="30">
                 </a>
             </div>
 
@@ -95,7 +95,7 @@
            {{ session('success')}}
        </div>
      @endif
-    
+
         </div>
       </div>
     </div>

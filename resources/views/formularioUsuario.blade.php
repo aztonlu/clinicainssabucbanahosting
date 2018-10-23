@@ -41,12 +41,12 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="img/hospital.png" width="30" height="30">
+                    <img src="img/hospital.png" width="150" height="30">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <ul class="nav navbar-nav">   
+                <ul class="nav navbar-nav">
                     <li><a href="home">Filiación</a></li>
                     <li><a href="citas">Citas</a></li>
                     <li><a href="busquedaRapida">Consulta del día</a></li>
@@ -79,7 +79,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Registro de Pacientes</div>
+                    <div class="panel-heading">Registro de Usuarios</div>
                     <div class="panel-body">
                         <form class="form-horizontal" role="form" method="POST" action="registroUsuario">
                             {{ csrf_field() }}

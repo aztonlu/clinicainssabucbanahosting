@@ -41,14 +41,14 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="img/hospital.png" width="30" height="30">
+                    <img src="img/hospital.png" width="150" height="30">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    
+
                     <li><a href="home">Filiación</a></li>
                     <li><a href="citas">Citas</a></li>
                     <li class="active"><a href="historial">Historiales</a></li>
