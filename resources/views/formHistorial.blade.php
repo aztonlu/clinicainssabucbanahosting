@@ -81,7 +81,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Registro de Historial Médico</div>
+                    <div class="panel-heading">Registro de Historial Odontol&oacute;gico</div>
                     <div class="panel-body">
 
                         <form class="form-horizontal" method="POST" action="registroHistorial" id="form2" enctype="multipart/form-data">
@@ -129,10 +129,10 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('tiempoEnfermedad') ? ' has-error' : '' }}">
-                                  <label for="tiempoEnfermedad" class="col-md-4 control-label">Tiempo de Enfermedad: </label>
+                                  <label for="tiempoEnfermedad" class="col-md-4 control-label">Tiene alguna enfermedad?: </label>
 
                                   <div class="col-md-8">
-                                      <input id="tiempoEnfermedad" type="text" class="form-control" name="tiempoEnfermedad" value="">
+                                      <textarea class="form-control" rows="3" id="tiempoEnfermedad" name="tiempoEnfermedad" value=""></textarea>
                                       @if ($errors->has('tiempoEnfermedad'))
                                           <span class="help-block">
                                               <strong>{{ $errors->first('tiempoEnfermedad') }}</strong>
@@ -141,10 +141,10 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('formaInicio') ? ' has-error' : '' }}">
-                                  <label for="formaInicio" class="col-md-4 control-label">Forma de inicio: </label>
+                                  <label for="formaInicio" class="col-md-4 control-label">Tiene alguna condici&oacute;n especial o dolencia?: </label>
 
                                   <div class="col-md-8">
-                                      <textarea class="form-control" rows="5" id="formaInicio" name="formaInicio"></textarea>
+                                      <textarea class="form-control" rows="3" id="formaInicio" name="formaInicio"></textarea>
 
                                       @if ($errors->has('formaInicio'))
                                           <span class="help-block">
@@ -154,7 +154,7 @@
                                   </div>
                               </div>
                               <div class="form-group{{ $errors->has('curso') ? ' has-error' : '' }}">
-                                  <label for="curso" class="col-md-4 control-label">Curso: </label>
+                                  <label for="curso" class="col-md-4 control-label">Se encuentra medicado?: </label>
 
                                   <div class="col-md-8">
                                       <input id="curso" type="text" class="form-control" name="curso" value="">
@@ -300,7 +300,7 @@
     <script>
       function checkCookies()
       {
-        
+
         $("#fechaHistorial").hide();
       }
       function funcionForm2()
