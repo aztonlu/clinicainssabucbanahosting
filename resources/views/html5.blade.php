@@ -94,7 +94,7 @@
             </table>
             <ul class="list-inline">
               <li>
-                <h5>Total de sesion:</h5>
+                <h5>Total de la sesion:</h5>
               </li>
               <li>
                 <input type="text" name="total" id="total" value="0">
@@ -105,52 +105,38 @@
             <input type="hidden" name="texto64" id="texto64">
             <input type="hidden" name="dni" id="dni" class="total" value="{{ $paciente->dni }}">
 
-            @if($conceptos == "concepto_vacio")
-          @else
-            @if(count($conceptos) == 0)
-                <center><h5>No existen pagos previos</h5></center>
-          @else
-            <table class="table" id="myTable">
-            <thead>
-              <tr>
-
-              <th>Concepto</th>
-              <th>precio</th>
-            </tr>
-            </thead>
-            @foreach($conceptos as $concepto)
-            <tbody>
-
-                <td>{{ $concepto->concepto }}</td>
-                <td>{{ $concepto->precio }}</td>
-
-
-            </tbody>
-            @endforeach
-          </table>
-              @endif
-          @endif
-
-          <!--aqui solo le damos el dato que sea igual a la deuda total del cuadro izquierdo-->
-          <ul class="list-inline">
-            <li>
-              <h5>Deuda total pendiente:</h5>
-              @if($deuda == "deuda_vacia")
-                <input type="text" name="deuda" id="deuda">
+            <div class="col-sm-12">
+              @if($conceptos == "concepto_vacio")
               @else
-                @if(count($deuda) > 0)
-                  <input type="text" name="deuda" id="deuda" value="{{ $deuda }}">
-                @else
-                  <input type="text" name="deuda" id="deuda">
-                @endif
-              @endif
-          </ul>
+              <table class="table" id="myTable">
+                  <thead>
+                    <tr>
 
+                    <th>Concepto</th>
+                    <th>precio</th>
+                  </tr>
+                  </thead>
+                  @foreach($conceptos as $concepto)
+                  <tbody>
+
+                      <td>{{ $concepto->concepto }}</td>
+                      <td>{{ $concepto->precio }}</td>
+
+
+                  </tbody>
+                  @endforeach
+                </table>
+                @endif
+
+            </div>
 
         </div>
       </div>
-      <div class="col-sm-6">
-          <br><br><br><br><br><br>
+
+
+
+      <div class="col-sm-12">
+          <br><br>
           <ul class="list-inline">
             <li>
               <h5>Deuda:</h5>
@@ -170,9 +156,8 @@
               <input type="number" name="cuenta" id="cuenta">
             </li>
             <li>
-              <?php $fechadia=strftime( "%Y-%m-%d-%H-%M-%S", time() );?>
               <h5>fecha:</h5>
-              <input type="text" name="fechaCuenta" id="fechaCuenta" value=" ">
+              <input type="text" name="fechaCuenta" id="fechaCuenta">
             </li>
             <li>
               <button type="button" class="btn btn-success" id="buttonCalculate" onclick="addDeuda()">+</button>
@@ -193,13 +178,19 @@
 
             </tbody>
           </table>-->
-          
+          <ul class="list-inline">
+            <li>
+              <h5>Total Deuda:</h5>
+            </li>
+            <li>
+              <input type="text" name="totaldeuda" id="totaldeuda" value="0">
+            </li>
+          </ul>
+
+          <div class="col-sm-6">
           @if($cuentas == "cuenta_vacio")
           @else
-            @if(count($cuentas) == 0)
-                <center><h5>No existen pagos previos</h5></center>
-          @else
-            <table class="table" id="myTable">
+          <table class="table" id="myTable">
             <thead>
               <tr>
               <th>Fecha</th>
@@ -219,10 +210,10 @@
             </tbody>
             @endforeach
           </table>
-              @endif
           @endif
-      </div>
+        </div>
 
+      </div>
   </form>
   <!-- Modal -->
   @extends('layouts.modalconceptos')
